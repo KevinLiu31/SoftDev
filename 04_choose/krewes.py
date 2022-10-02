@@ -105,7 +105,7 @@ def gameTime(a):
         print(dicOfnum)
         print("name")
         print(allName)
-        name = str(input("name of person"))
+        name = str(input("name of person: "))
         while(not (name in allName)):
             print("please try again, make sure the name matches up with what is shown including CAPS!")
             name = str(input("name of person"))
@@ -113,7 +113,7 @@ def gameTime(a):
         period = int(input("period of person"))
         if(not (period in [2,7,8])):
             print("please select a proper period")
-            period = int(input("period of person"))
+            period = int(input("period of person: "))
         print("The option you put was: " + str(period) + ":" + name)
         if(name in NameofNum[period]):
             print("You are correct!")

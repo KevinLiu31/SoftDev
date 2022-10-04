@@ -48,7 +48,6 @@ for x in txt:
     list = x.rsplit(",", 1)
     dict[list[0]]= float(list[1])
     a = int(float(list[1]) * 10)
-    print(a)
     dict2[list[0]] = [a, 0]
     total[list[0]] = 0
 list = []

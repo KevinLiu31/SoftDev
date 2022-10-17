@@ -28,7 +28,7 @@ PROTIP: Insert your own in-line comments
    understand what is going on.
 '''
 
-@app.route("/") #methods=['GET', 'POST'])
+@app.route("/" , methods=['GET', 'POST'])
 def disp_loginpage():
     print("\n\n\n")
     print("***DIAG: this Flask obj ***")
@@ -46,10 +46,10 @@ def disp_loginpage():
     #name, similar to printing request
     print(request.headers)
     return render_template( 'login.html' )
-    #when press submit it updates the request. 
+    #when press submit it updates the request.
 
 
-@app.route("/auth") #methods=['GET', 'POST'])
+@app.route("/auth", methods=['GET', 'POST'])
 def authenticate():
     print("\n\n\n")
     print("***DIAG: this Flask obj ***")
@@ -63,7 +63,7 @@ def authenticate():
     #print(request.args['username'])
     print("***DIAG: request.headers ***")
     print(request.headers)
-    return "Waaaa hooo HAAAH"  #response to a form submission
+    return "Hi " + request.args.get('username') #response to a form submission
 
 
 

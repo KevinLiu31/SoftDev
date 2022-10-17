@@ -1,4 +1,4 @@
-# Clyde 'Thluffy' Sinclair
+# TNPG: PPP (Marc Jiang, Thomas Zhang, Kevin Liu)
 # SoftDev
 # Oct 2022
 

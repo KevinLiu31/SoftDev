@@ -1,4 +1,6 @@
 import random as random
+from subprocess import list2cmdline
+from xml.dom.minidom import AttributeList
 """ Undesirable
  SoftDev
  K01 -- Krewes
@@ -56,19 +58,10 @@ def getDevo2(a):
     return ans
 print("way 1: " + getDevo(krewes))
 print("way 2: " + getDevo2(krewes))
-def getDevoHelp(a):
-    ans = ""
-    #puts all the keys in the dictionary into a list
-    keys = list(a)
-    #picks a random key from the list of keys
-    randomKey = random.choice(keys)
-    ans += "period: " + str(randomKey)
-    #return a random value from the list associated with the key.
-    return [randomKey, random.choice(a[randomKey])]
-print(getDevoHelp(krewes))
+
 def gameTime(a):
-    counter = 0;
     print("Let's play a game!\n")
+    length = 
     print("How to Play: Imagine memorizing but not really\n")
     isValue = False
     while (not isValue):
@@ -81,50 +74,19 @@ def gameTime(a):
                 print("Value is not between 1-106")
         except ValueError:
             print("Please enter a value")
-    print("You are given " + str(n) + " names\n")
-    dicOfnum = {2:0, 7:0, 8:0}
-    NameofNum = {2:[], 7:[], 8:[]}
-    allName = []
-    for x in range(n):
-         tempList = getDevoHelp(a)
-         a[tempList[0]].remove(tempList[1])
-         allName.append(tempList[1])
-         dicOfnum[tempList[0]] = dicOfnum[tempList[0]] + 1
-         NameofNum[tempList[0]].append(tempList[1])
-    print("You'll be given a dictionary of the period and the number of people in each period\n")
-    print("And a list of names that you must match each period\n")
-    print("When you are ready press enter")
+    print("You are given " + str(n) + "names\n")
+    list2 = 
+    a = 0
+    b = 0
+    c = 0
+    alist ={}
+    blist ={}
+    clist ={}
+    while()
+    dicOfnum = {2:a, 7:b, 8:c}
+    print("You'll be given a dictionary of the perid and the number of people in each period\n")
+    
     next = input("")
-    print(dicOfnum)
-    print("name")
-    print(allName)
-    print("Press enter to continue")
-    next = input("")
-    print("Your goal is now to enter a name, and then enter a period")
-    while(len(allName) > 0):
-        print(dicOfnum)
-        print("name")
-        print(allName)
-        name = str(input("name of person: "))
-        while(not (name in allName)):
-            print("please try again, make sure the name matches up with what is shown including CAPS!")
-            name = str(input("name of person"))
-        print("The name you select: " + name)
-        period = int(input("period of person"))
-        if(not (period in [2,7,8])):
-            print("please select a proper period")
-            period = int(input("period of person: "))
-        print("The option you put was: " + str(period) + ":" + name)
-        if(name in NameofNum[period]):
-            print("You are correct!")
-            dicOfnum[period] = dicOfnum[period] - 1
-            NameofNum[period].remove(name)
-            allName.remove(name)
-            next = input("Press enters")
-        else:
-            print("you are incorrect!")
-            next = input("Press enters")
-        counter+=1
-        print("Amount of guesses: " + str(counter))
-    print("Game Over: You achieved it in " + str(counter) + " guessse")
-gameTime(krewes)
+    
+gameTime()
+
